@@ -1,0 +1,2 @@
+# DailyTale
+Write daily tales
