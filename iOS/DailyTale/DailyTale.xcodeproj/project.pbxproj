@@ -7,18 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1C4BE92A7D988600628A99 /* WriterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C4BE82A7D988600628A99 /* WriterView.swift */; };
+		9A1C4BEB2A7DA0D900628A99 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1C4BEA2A7DA0D900628A99 /* SettingsView.swift */; };
+		9A4FFBAE2A7FD78800BCA547 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FFBAD2A7FD78800BCA547 /* HomeView.swift */; };
+		9A4FFBB02A7FDCC600BCA547 /* TalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FFBAF2A7FDCC600BCA547 /* TalesView.swift */; };
+		9A4FFBB22A87D18C00BCA547 /* TalesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FFBB12A87D18C00BCA547 /* TalesController.swift */; };
+		9A4FFBB52A87D31000BCA547 /* DailyTale.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FFBB32A87D31000BCA547 /* DailyTale.xcdatamodeld */; };
+		9A4FFBBC2A87EAA600BCA547 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FFBBB2A87EAA600BCA547 /* SettingsController.swift */; };
+		9A4FFBBF2A87EEB700BCA547 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FFBBE2A87EEB700BCA547 /* Color.swift */; };
+		9A4FFBC12A87F31300BCA547 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4FFBC02A87F31300BCA547 /* Constants.swift */; };
 		9AE77DF52A7D8E010073CED0 /* DailyTaleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE77DF42A7D8E010073CED0 /* DailyTaleApp.swift */; };
-		9AE77DF72A7D8E010073CED0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE77DF62A7D8E010073CED0 /* ContentView.swift */; };
 		9AE77DF92A7D8E040073CED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE77DF82A7D8E040073CED0 /* Assets.xcassets */; };
 		9AE77DFC2A7D8E040073CED0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE77DFB2A7D8E040073CED0 /* Preview Assets.xcassets */; };
+		9AEEE3D72A8915E400641307 /* WordGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEE3D62A8915E400641307 /* WordGridView.swift */; };
+		9AEEE3DF2A8AA68400641307 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEE3DE2A8AA68400641307 /* Array.swift */; };
+		9AEEE3E12A8AAF1A00641307 /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEEE3E02A8AAF1A00641307 /* WordsViewController.swift */; };
+		9AEEE3E32A8D392F00641307 /* wordlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 9AEEE3E22A8D392F00641307 /* wordlist.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A1C4BE82A7D988600628A99 /* WriterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriterView.swift; sourceTree = "<group>"; };
+		9A1C4BEA2A7DA0D900628A99 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9A4FFBAD2A7FD78800BCA547 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9A4FFBAF2A7FDCC600BCA547 /* TalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalesView.swift; sourceTree = "<group>"; };
+		9A4FFBB12A87D18C00BCA547 /* TalesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalesController.swift; sourceTree = "<group>"; };
+		9A4FFBB42A87D31000BCA547 /* DailyTale.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DailyTale.xcdatamodel; sourceTree = "<group>"; };
+		9A4FFBBB2A87EAA600BCA547 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		9A4FFBBE2A87EEB700BCA547 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9A4FFBC02A87F31300BCA547 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9A4FFBC42A87F51300BCA547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9AE77DF12A7D8E010073CED0 /* DailyTale.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyTale.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE77DF42A7D8E010073CED0 /* DailyTaleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaleApp.swift; sourceTree = "<group>"; };
-		9AE77DF62A7D8E010073CED0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9AE77DF82A7D8E040073CED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AE77DFB2A7D8E040073CED0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9AEEE3D62A8915E400641307 /* WordGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGridView.swift; sourceTree = "<group>"; };
+		9AEEE3DE2A8AA68400641307 /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		9AEEE3E02A8AAF1A00641307 /* WordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
+		9AEEE3E22A8D392F00641307 /* wordlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordlist.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +57,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A4FFBB82A87EA1000BCA547 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9AEEE3DB2A8AA3F600641307 /* Words */,
+				9A1C4BEA2A7DA0D900628A99 /* SettingsView.swift */,
+				9A4FFBAD2A7FD78800BCA547 /* HomeView.swift */,
+				9A4FFBAF2A7FDCC600BCA547 /* TalesView.swift */,
+				9A1C4BE82A7D988600628A99 /* WriterView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A4FFBB92A87EA1A00BCA547 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A4FFBB32A87D31000BCA547 /* DailyTale.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A4FFBBA2A87EA2000BCA547 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9A4FFBB12A87D18C00BCA547 /* TalesController.swift */,
+				9A4FFBBB2A87EAA600BCA547 /* SettingsController.swift */,
+				9AEEE3E02A8AAF1A00641307 /* WordsViewController.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A4FFBBD2A87EEAB00BCA547 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9A4FFBBE2A87EEB700BCA547 /* Color.swift */,
+				9AEEE3DE2A8AA68400641307 /* Array.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9AE77DE82A7D8E010073CED0 = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +115,16 @@
 		9AE77DF32A7D8E010073CED0 /* DailyTale */ = {
 			isa = PBXGroup;
 			children = (
+				9AEEE3E22A8D392F00641307 /* wordlist.json */,
+				9A4FFBC42A87F51300BCA547 /* Info.plist */,
+				9A4FFBBD2A87EEAB00BCA547 /* Extensions */,
+				9A4FFBBA2A87EA2000BCA547 /* ViewModels */,
+				9A4FFBB92A87EA1A00BCA547 /* Models */,
+				9A4FFBB82A87EA1000BCA547 /* Views */,
 				9AE77DF42A7D8E010073CED0 /* DailyTaleApp.swift */,
-				9AE77DF62A7D8E010073CED0 /* ContentView.swift */,
 				9AE77DF82A7D8E040073CED0 /* Assets.xcassets */,
 				9AE77DFA2A7D8E040073CED0 /* Preview Content */,
+				9A4FFBC02A87F31300BCA547 /* Constants.swift */,
 			);
 			path = DailyTale;
 			sourceTree = "<group>";
@@ -65,6 +135,14 @@
 				9AE77DFB2A7D8E040073CED0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9AEEE3DB2A8AA3F600641307 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				9AEEE3D62A8915E400641307 /* WordGridView.swift */,
+			);
+			path = Words;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +161,8 @@
 			dependencies = (
 			);
 			name = DailyTale;
+			packageProductDependencies = (
+			);
 			productName = DailyTale;
 			productReference = 9AE77DF12A7D8E010073CED0 /* DailyTale.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +191,8 @@
 				Base,
 			);
 			mainGroup = 9AE77DE82A7D8E010073CED0;
+			packageReferences = (
+			);
 			productRefGroup = 9AE77DF22A7D8E010073CED0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +209,7 @@
 			files = (
 				9AE77DFC2A7D8E040073CED0 /* Preview Assets.xcassets in Resources */,
 				9AE77DF92A7D8E040073CED0 /* Assets.xcassets in Resources */,
+				9AEEE3E32A8D392F00641307 /* wordlist.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +220,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AE77DF72A7D8E010073CED0 /* ContentView.swift in Sources */,
+				9A1C4BEB2A7DA0D900628A99 /* SettingsView.swift in Sources */,
+				9AEEE3DF2A8AA68400641307 /* Array.swift in Sources */,
+				9AEEE3D72A8915E400641307 /* WordGridView.swift in Sources */,
+				9A4FFBB22A87D18C00BCA547 /* TalesController.swift in Sources */,
+				9AEEE3E12A8AAF1A00641307 /* WordsViewController.swift in Sources */,
+				9A4FFBAE2A7FD78800BCA547 /* HomeView.swift in Sources */,
+				9A4FFBBC2A87EAA600BCA547 /* SettingsController.swift in Sources */,
 				9AE77DF52A7D8E010073CED0 /* DailyTaleApp.swift in Sources */,
+				9A4FFBC12A87F31300BCA547 /* Constants.swift in Sources */,
+				9A4FFBB02A7FDCC600BCA547 /* TalesView.swift in Sources */,
+				9A1C4BE92A7D988600628A99 /* WriterView.swift in Sources */,
+				9A4FFBB52A87D31000BCA547 /* DailyTale.xcdatamodeld in Sources */,
+				9A4FFBBF2A87EEB700BCA547 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +364,7 @@
 				DEVELOPMENT_TEAM = YL599662J5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyTale/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +394,7 @@
 				DEVELOPMENT_TEAM = YL599662J5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DailyTale/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +435,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A4FFBB32A87D31000BCA547 /* DailyTale.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A4FFBB42A87D31000BCA547 /* DailyTale.xcdatamodel */,
+			);
+			currentVersion = 9A4FFBB42A87D31000BCA547 /* DailyTale.xcdatamodel */;
+			path = DailyTale.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9AE77DE92A7D8E010073CED0 /* Project object */;
 }

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DailyTaleApp: App {
+    @StateObject private var talesController = TalesController()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environment(\.managedObjectContext, talesController.container.viewContext)
         }
     }
 }
