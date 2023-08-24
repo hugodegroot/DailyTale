@@ -18,16 +18,23 @@ struct SettingsView: View {
                 List {
                     ColorPicker("Text color", selection: $settings.textColor, supportsOpacity: false)
                     
+                    // TODO: Set to 5...60
+                    Stepper(value: $settings.secondsInbetweenWords, in: 1...60, step: 1) {
+                        Text("Seconds in between words: \(settings.secondsInbetweenWords)")
+                    }
+                    
+                    // TODO: Set to 5...20, step 5
+                    Stepper(value: settings.$amountOfWords, in: 2...20, step: 2) {
+                        Text("Amount of words: \(settings.amountOfWords)")
+                    }
+                    
                     Picker("Font", selection: $settings.textFontString) {
                         ForEach(settings.availableFontFamilies, id: \.self) { fontFamily in
                             Text(fontFamily)
+                                .font(.custom(fontFamily, size: 12))
                         }
                     }
-                    
-                    // TODO: Set to 5...60
-                    Stepper(value: $settings.secondsInbetweenWords, in: 1...60, step: 1) {
-                        Text("Seconds in between words: \(Int(settings.secondsInbetweenWords.rounded(.toNearestOrAwayFromZero)))")
-                    }
+                    .pickerStyle(WheelPickerStyle())
                 }
             }
             .navigationTitle("Settings")

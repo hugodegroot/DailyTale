@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         VStack {
             NavigationStack {
-                TalesView()
+                TalesView(amountOfWords: settings.amountOfWords)
                     .toolbar {
                         Button {
                             showingSheet.toggle()

@@ -10,7 +10,7 @@ import SwiftUI
 struct TalesView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: #keyPath(Tale.createdAt), ascending: false)]) var tales: FetchedResults<Tale>
-    
+    private let amountOfWords: Int
     private var groupedTales: [String: [Tale]] {
         var groupedTales = [String: [Tale]]()
         
@@ -43,7 +43,7 @@ struct TalesView: View {
         VStack {
             List {
                 NavigationLink {
-                    WriterView(showGameOptions: true)
+                    WriterView(showGameOptions: true, amountOfWords: amountOfWords)
                 } label: {
                     Text("New")
                 }
@@ -53,7 +53,7 @@ struct TalesView: View {
                         ForEach(groupedTales[key] ?? [], id: \.id) { tale in
                             if let text = tale.text, let words = tale.words {
                                 NavigationLink {
-                                    WriterView(showGameOptions: false, text: text, words: words)
+                                    WriterView(showGameOptions: false, text: text, words: words, amountOfWords: words.count)
                                 } label: {
                                     Text(text)
                                         .lineLimit(2)
@@ -67,6 +67,10 @@ struct TalesView: View {
             .navigationTitle("DailyTales")
             .navigationBarTitleDisplayMode(.inline)
         }
+    }
+    
+    init(amountOfWords: Int) {
+        self.amountOfWords = amountOfWords
     }
     
     private func delete(at offsets: IndexSet) {
@@ -84,6 +88,6 @@ struct TalesView: View {
 
 struct TalesView_Previews: PreviewProvider {
     static var previews: some View {
-        TalesView()
+        TalesView(amountOfWords: 10)
     }
 }

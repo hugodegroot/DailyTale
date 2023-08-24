@@ -10,15 +10,17 @@ import SwiftUI
 class SettingsController: ObservableObject {
     @AppStorage("textcolorkey") var textColor: Color = .black
     @AppStorage("textfontkey") var textFontString: String = "System"
-    @AppStorage("secondsInbetweenWordsKey") var secondsInbetweenWords: Double = 1
-    @AppStorage("amountOfWordsKey") static var amountOfWords: Double = 10
+    @AppStorage("secondsInbetweenWordsKey") var secondsInbetweenWords: Int = 1
+    @AppStorage("amountOfWordsKey") var amountOfWords: Int = 20
     
-    var totalGameTime: Double {
-        SettingsController.amountOfWords * secondsInbetweenWords
+    var totalGameTime: Int {
+        amountOfWords * secondsInbetweenWords
     }
     
     var availableFontFamilies: [String] {
-        return UIFont.familyNames.sorted()
+        var font = UIFont.familyNames.sorted()
+        font.insert("SF Pro", at: 0)
+        return font
     }
     
     var availableFontsForSelectedFamily: [String] {

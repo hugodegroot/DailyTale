@@ -18,10 +18,12 @@ struct WriterView: View {
     
     var body: some View {
         VStack {
-            VStack {
+            VStack(spacing: 0) {
                 WordGridView(wordsViewController: wordsViewController)
-                    .padding(.horizontal)
-                    .fixedSize(horizontal: true, vertical: false)
+                    .padding(.bottom)
+                
+                Divider()
+                
                  if !wordsViewController.showGameOptions {
                     scrollViewTextField
                 } else {
@@ -57,7 +59,7 @@ struct WriterView: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
             }
         }
-        .padding(.vertical)
+        .padding(.top)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(
             Constants.backgroundColor
@@ -76,7 +78,7 @@ struct WriterView: View {
                 .font(.custom(settings.textFontString, size: 16))
                 .disabled(!wordsViewController.gameActive)
                 .focused($focusOnTexfield)
-                .padding(.horizontal)
+                .padding([.horizontal, .top])
         }
     }
     
@@ -97,15 +99,15 @@ struct WriterView: View {
     init(
         showGameOptions: Bool,
         text: String = "",
-        words: [String] = []
+        words: [String] = [],
+        amountOfWords: Int
     ) {
-        self._wordsViewController = StateObject(wrappedValue: WordsViewController(words: words, showGameOptions: showGameOptions, text: text))
-        
-    }
+        self._wordsViewController = StateObject(wrappedValue: WordsViewController(words: words, showGameOptions: showGameOptions, text: text, amountOfWords: amountOfWords))
+        }
     
     private func onSecondElapesed() {
         if (wordsViewController.gameActive) {
-            if wordsViewController.wordCount < 10 {
+            if wordsViewController.wordCount < Int(settings.amountOfWords) {
                 wordsViewController.wordCount += 1
             } else {
                 stopGame(gameFinished: true)
@@ -114,7 +116,7 @@ struct WriterView: View {
     }
     
     private func startGame() {
-        timer = Timer.publish(every: settings.secondsInbetweenWords, on: .main, in: .common).autoconnect()
+        timer = Timer.publish(every: Double(settings.secondsInbetweenWords), on: .main, in: .common).autoconnect()
         wordsViewController.gameActive.toggle()
         focusOnTexfield = true
         wordsViewController.wordCount = 1
@@ -152,6 +154,6 @@ struct WriterView: View {
 
 struct WriterView_Previews: PreviewProvider {
     static var previews: some View {
-        WriterView(showGameOptions: true)
+        WriterView(showGameOptions: true, amountOfWords: 10)
     }
 }

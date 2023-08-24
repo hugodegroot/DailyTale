@@ -27,12 +27,12 @@ class WordsViewController: ObservableObject {
         return "Press Start to begin!"
     }
     
-    init(words: [String] = [], showGameOptions: Bool = false, text: String = "") {
+    init(words: [String] = [], showGameOptions: Bool = false, text: String = "", amountOfWords: Int) {
         self.showGameOptions = showGameOptions
         self.text = text
         if words.isEmpty {
             loadData()
-            for _ in (0..<Int(SettingsController.amountOfWords)) {
+            for _ in (0..<amountOfWords) {
                 let randomNumber = Int.random(in: 0..<wordList.count)
                 self.words.append(wordList[randomNumber])
             }
