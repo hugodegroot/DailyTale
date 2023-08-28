@@ -11,13 +11,13 @@ struct TalesView: View {
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(sortDescriptors: [NSSortDescriptor(key: #keyPath(Tale.createdAt), ascending: false)]) var tales: FetchedResults<Tale>
     private let amountOfWords: Int
+    private let dateFormatter = DateFormatter()
     private var groupedTales: [String: [Tale]] {
         var groupedTales = [String: [Tale]]()
         
         let lastWeek = Calendar.current.date(byAdding: .day, value: -7, to: Date())!
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM yyyy"
-        
         for tale in tales {
             if let createdAt = tale.createdAt {
                 if createdAt >= lastWeek {
@@ -51,12 +51,18 @@ struct TalesView: View {
                 ForEach(groupedTales.keys.sorted(), id: \.self) { key in
                     Section(header: Text(key)) {
                         ForEach(groupedTales[key] ?? [], id: \.id) { tale in
-                            if let text = tale.text, let words = tale.words {
+                            if let text = tale.text, let words = tale.words, let createdAt = tale.createdAt {
                                 NavigationLink {
                                     WriterView(showGameOptions: false, text: text, words: words, amountOfWords: words.count)
                                 } label: {
-                                    Text(text)
-                                        .lineLimit(2)
+                                    VStack(alignment: .leading) {
+                                        Text(text)
+                                            .lineLimit(2)
+                                        
+                                        Text(dateFormatter.string(from: createdAt))
+                                            .font(.subheadline)
+                                            .foregroundStyle(Color.gray)
+                                    }
                                 }
                             }
                         }
@@ -71,6 +77,7 @@ struct TalesView: View {
     
     init(amountOfWords: Int) {
         self.amountOfWords = amountOfWords
+        dateFormatter.dateFormat = "d MMM y"
     }
     
     private func delete(at offsets: IndexSet) {
