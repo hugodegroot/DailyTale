@@ -39,7 +39,7 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
-            .background(Constants.backgroundColor)
+            .background(Color.backgroundColor)
             .scrollContentBackground(.hidden)
             .toolbar {
                 Button {
@@ -51,7 +51,7 @@ struct SettingsView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
-        .background(Constants.backgroundColor)
+        .background(Color.backgroundColor)
     }
     
     init(settings: SettingsController) {

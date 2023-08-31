@@ -42,7 +42,7 @@ struct WriterView: View {
                                 .foregroundColor(.white)
                                 .frame(width: 48, height: 48)
                                 .padding(.horizontal)
-                                .background(Circle().foregroundColor(Constants.stopButtonBackgroundColor))
+                                .background(Circle().foregroundColor(Color.secondaryColor))
                         }
                     } else {
                         Button {
@@ -52,7 +52,7 @@ struct WriterView: View {
                                 .foregroundColor(.white)
                                 .frame(width: 48, height: 48)
                                 .padding(.horizontal)
-                                .background(Circle().foregroundColor(Constants.startButtonBackgroundColor))
+                                .background(Circle().foregroundColor(.primaryColor))
                         }
                     }
                 }
@@ -62,7 +62,7 @@ struct WriterView: View {
         .padding(.top)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         .background(
-            Constants.backgroundColor
+            Color.backgroundColor
         )
         .onReceive(timer) { _ in
             onSecondElapesed()
