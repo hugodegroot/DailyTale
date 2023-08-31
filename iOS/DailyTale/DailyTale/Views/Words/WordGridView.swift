@@ -12,15 +12,30 @@ struct WordGridView: View {
     @EnvironmentObject private var settings: SettingsController
     @ObservedObject private var wordsViewController: WordsViewController
     
+    let columns: [GridItem] = [
+            GridItem(.flexible(), spacing: 8),
+            GridItem(.flexible(), spacing: 8),
+            GridItem(.flexible(), spacing: 8),
+            GridItem(.flexible(), spacing: 8)
+        ]
+    
     var body: some View {
         VStack {
-            Grid(0..<wordsViewController.words.count, id: \.self, tracks: [.fit, .fit, .fit, .fit]) { index in
-                Text(wordsViewController.words[index])
-                    .blur(radius: showBlur(wordCount: index) ? 0 : 10)
-                    .font(.custom(settings.textFontString, size: 16))
+            LazyVGrid(columns: columns, spacing: 16) {
+                ForEach(0..<wordsViewController.words.count, id: \.self) { index in
+                    Text(wordsViewController.words[index])
+                        .blur(radius: showBlur(wordCount: index) ? 0 : 10)
+                        .font(.custom(settings.textFontString, size: 16))
+                        .foregroundStyle(Color.textColor)
+                        .padding(8)
+                        .background(
+                            RoundedRectangle(cornerRadius: 24)
+                                .foregroundColor(Color.highlightColor)
+                        )
+                }
             }
+            .padding(.horizontal)
         }
-        .frame(maxHeight: 80)
     }
     
     init(wordsViewController: WordsViewController) {
